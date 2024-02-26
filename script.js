@@ -1,13 +1,13 @@
 //your JS code here. If required.
-const height = document.getElementById('height');
-const width = document.getElementById('width');
+const height = [...document.getElementsByClassName('height')];
+const width = [...document.getElementsByClassName('width')];
 
 window.onload = function(){
-	height.innerHTML = window.innerHeight;
-    width.innerHTML = window.innerWidth;
+	height[0].innerHTML = window.innerHeight;
+    width[0].innerHTML = window.innerWidth;
 }
 
 window.onresize = function(){
-	height.innerHTML = window.innerHeight;
-    width.innerHTML = window.innerWidth;
+	height[0].innerHTML = window.innerHeight;
+    width[0].innerHTML = window.innerWidth;
 }
