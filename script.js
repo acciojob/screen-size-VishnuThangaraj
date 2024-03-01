@@ -1,10 +1,10 @@
 //your JS code here. If required.
-let result = document.getElementById('sizeInfo');
+let result = document.getElementsByTagName('h1');
 
 window.onload = function(){
-	result.innerHTML = `<h1> Width: ${window.innerWidth} and Height: ${window.innerHeight}</h1>`;
+	result[0].innerHTML = `Width: ${window.innerWidth} and Height: ${window.innerHeight}`;
 }
 
 window.onresize = function(){
-	result.innerHTML = `<h1> Width: ${window.innerWidth} and Height: ${window.innerHeight}</h1>`;
+	result[0].innerHTML = `Width: ${window.innerWidth} and Height: ${window.innerHeight}`;
 }
