@@ -1,10 +1,15 @@
-//your JS code here. If required.
-let result = document.getElementsByTagName('h1');
+// Function to update size information
+        function updateSize() {
+            var widthElement = document.getElementById('width');
+            var heightElement = document.getElementById('height');
 
-window.onload = function(){
-	result[0].innerHTML = `Width: ${window.innerWidth} and Height: ${window.innerHeight}`;
-}
+            // Update width and height in the <h1> tag
+            widthElement.textContent = window.innerWidth;
+            heightElement.textContent = window.innerHeight;
+        }
 
-window.onresize = function(){
-	result[0].innerHTML = `Width: ${window.innerWidth} and Height: ${window.innerHeight}`;
-}
+        // Initial call to set the initial size
+        updateSize();
+
+        // Add an event listener for the window resize event
+        window.addEventListener('resize', updateSize);
