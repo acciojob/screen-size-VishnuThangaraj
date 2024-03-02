@@ -1,11 +1,11 @@
 // Function to update size information
         function updateSize() {
-            var widthElement = document.getElementById('width');
-            var heightElement = document.getElementById('height');
+            var widthElement = [...document.getElementsByClassName('width')];
+            var heightElement = [...document.getElementsByClassName('height')];
 
             // Update width and height in the <h1> tag
-            widthElement.textContent = window.innerWidth;
-            heightElement.textContent = window.innerHeight;
+            widthElement[0].textContent = window.innerWidth;
+            heightElement[0].textContent = window.innerHeight;
         }
 
         // Initial call to set the initial size
